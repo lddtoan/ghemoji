@@ -20,7 +20,10 @@ jobs:
           pip3 install -r requirements.txt
           sh ./build.sh
       - name: Release
-        uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
+        uses: "marvinpinto/action-automatic-releases@latest"
         with:
-          files: ./dist/ghemoji
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Development Build"
+          files: dist/ghemoji
