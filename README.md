@@ -39,11 +39,11 @@ Uninstall git hook:
 ghemoji -u "path/to/repo"
 ```
 
-Commit:
+## Commit
 
 ![Commit](usage.gif)
 
-# Default emoji
+## Default emoji
 
 _Notice: colon symbol - (:) at the end of text_
 
