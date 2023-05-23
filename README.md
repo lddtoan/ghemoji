@@ -7,12 +7,13 @@ prepare-commit-msg hook for Gitmoji.
 ```
 Python 3.8
 Poetry 1.4.2
+Patchelf 0.10
 ```
 
 # Build
 
 ```
-poetry install --dev
+poetry install --dev-dependency
 sh ./build.sh
 ```
 
