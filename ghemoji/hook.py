@@ -17,9 +17,10 @@ EMOJI = {
     "revert:": "⏪️",
     "pref:": "⚡️",
     "refactor:": "♻️",
-    "test": "✅",
-    "ci": "👷",
-    "typo": "✏️",
+    "test:": "✅",
+    "ci:": "👷",
+    "typo:": "✏️",
+    "docs:": "📝",
 }
 
 
@@ -53,7 +54,7 @@ def install(path: str):
 
 def uninstall(path: str):
     """
-    Uninstall GHEmoji to prepare-commit-msg
+    Uninstall GHEmoji from prepare-commit-msg
     """
     hook_path = os.path.join(path, ".git", "hooks", "prepare-commit-msg")
     if not os.path.isfile(hook_path):
@@ -71,7 +72,7 @@ def uninstall(path: str):
 
 def commit(directory: str, path: str):
     """
-    Process commit message when after user commit
+    Process commit message after user commit
     """
     config_path = os.path.join(directory, "ghemoji.yaml")
     emoji = EMOJI.copy()
